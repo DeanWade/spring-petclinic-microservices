@@ -15,15 +15,17 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>spring-petclinic-admin-server</module>
-		<module>spring-petclinic-customers-service</module>
-		<module>spring-petclinic-vets-service</module>
-		<module>spring-petclinic-visits-service</module>
 		<module>spring-petclinic-config-server</module>
         <module>spring-petclinic-discovery-server</module>
         <module>spring-petclinic-api-gateway</module>
+		<module>spring-petclinic-customers-service</module>
+		<module>spring-petclinic-vets-service</module>
+		<module>spring-petclinic-visits-service</module>
+        <!-- 
+		<module>spring-petclinic-admin-server</module>
         <module>spring-petclinic-monitoring</module>
         <module>spring-petclinic-tracing-server</module>
+         -->
     </modules>
 
     <properties>
@@ -102,7 +104,7 @@
                         </executions>
                     </plugin>
 
-                    <!-- Spring Boot Actuator displays build-related information if a META-INF/build-info.properties file is present -->
+                    <!-- Spring Boot Actuator displays build-related information if a META-INF/build-info.properties file is present
                     <plugin>
                         <groupId>pl.project13.maven</groupId>
                         <artifactId>git-commit-id-plugin</artifactId>
@@ -121,6 +123,7 @@
                             </generateGitPropertiesFilename>
                         </configuration>
                     </plugin>
+                     -->
                 </plugins>
             </build>
 

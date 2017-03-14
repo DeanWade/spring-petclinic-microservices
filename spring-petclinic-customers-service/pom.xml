@@ -15,12 +15,6 @@
 	</parent>
 
 	<dependencies>
-        <!-- Petclinic -->
-        <dependency>
-            <groupId>org.springframework.samples.petclinic.monitoring</groupId>
-            <artifactId>spring-petclinic-monitoring</artifactId>
-        </dependency>
-
         <!-- Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -48,14 +42,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-sleuth</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-sleuth-zipkin</artifactId>
         </dependency>
 
         <!-- Third parties -->
