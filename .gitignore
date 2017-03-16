@@ -12,3 +12,8 @@ target/
 
 # Branch switching
 generated/
+spring-petclinic-customers-service/customers-service.properties
+*.lock
+spring-petclinic-portal-app/portal-app.properties
+spring-petclinic-vets-service/vets-service.properties
+spring-petclinic-visits-service/visits-service.properties
