@@ -78,7 +78,22 @@ public class Owner {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "owner")
     private Set<Pet> pets;
 
-    public Integer getId() {
+
+	public Owner() {
+		super();
+	}
+
+	public Owner(Integer id, String firstName, String lastName, String address, String city, String telephone) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+		this.city = city;
+		this.telephone = telephone;
+	}
+
+	public Integer getId() {
         return id;
     }
 

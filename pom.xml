@@ -15,16 +15,19 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>spring-petclinic-config-server</module>
-        <module>spring-petclinic-discovery-server</module>
-        <module>spring-petclinic-api-gateway</module>
+
+        <module>spring-petclinic-portal-app</module>
 		<module>spring-petclinic-customers-service</module>
 		<module>spring-petclinic-vets-service</module>
 		<module>spring-petclinic-visits-service</module>
+		<module>spring-petclinic-service-api</module>
         <!-- 
 		<module>spring-petclinic-admin-server</module>
         <module>spring-petclinic-monitoring</module>
         <module>spring-petclinic-tracing-server</module>
+        <module>spring-petclinic-config-server</module>
+        <module>spring-petclinic-discovery-server</module>
+        <module>spring-petclinic-api-gateway</module>
          -->
     </modules>
 

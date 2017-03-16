@@ -27,8 +27,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 /**
  * Simple JavaBean domain object representing a visit.
  *
@@ -45,7 +43,6 @@ public class Visit {
 
     @Column(name = "visit_date")
     @Temporal(TemporalType.TIMESTAMP)
-    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date date = new Date();
 
     @Size(max = 8192)
@@ -53,25 +50,37 @@ public class Visit {
     private String description;
 
     @Column(name = "pet_id")
-    private int petId;
+    private Integer petId;
 
-    public Integer getId() {
+    public int getId() {
         return id;
+    }
+    
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Date getDate() {
         return date;
     }
 
+    public void setDate(Date date) {
+        this.date = date;
+    }
+    
     public String getDescription() {
         return description;
+    }
+    
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getPetId() {
         return petId;
     }
 
-    public void setPetId(final int petId) {
+    public void setPetId(int petId) {
         this.petId = petId;
     }
 
