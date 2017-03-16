@@ -14,8 +14,11 @@
 	<packaging>pom</packaging>
 	
 	<properties>
-        <assertj.version>3.6.2</assertj.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+		<java.version>1.8</java.version>
+		<dynatrace.version>6.5</dynatrace.version>
     </properties>
 
 	<modules>
@@ -26,5 +29,55 @@
 		<module>spring-petclinic-service-api</module>
     </modules>
 
-
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>dubbo</artifactId>
+				<version>2.5.3</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>spring</artifactId>
+						<groupId>org.springframework</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+	
+			<dependency>
+				<groupId>org.apache.zookeeper</groupId>
+				<artifactId>zookeeper</artifactId>
+				<version>3.4.6</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-log4j12</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+	
+			<dependency>
+				<groupId>com.github.sgroschupf</groupId>
+				<artifactId>zkclient</artifactId>
+				<version>0.1</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.dynatrace</groupId>
+				<artifactId>dynatrace-dubbo</artifactId>
+				<version>${dynatrace.version}</version>
+				<scope>runtime</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.dynatrace</groupId>
+				<artifactId>com.dynatrace.adk</artifactId>
+				<version>${dynatrace.version}</version>
+				<scope>runtime</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
 </project>

@@ -5,7 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
 	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 	
-	<dubbo:application name="${spring.application.name}"  />
+	<dubbo:application name="${dubbo.application.name}"  />
 
     <dubbo:registry id="zookeeper" protocol="zookeeper" address="${dubbo.registry.address}" file="${dubbo.registry.file}"/>
     
