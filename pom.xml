@@ -17,7 +17,8 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
 		<java.version>1.8</java.version>
-		<dynatrace.version>6.5</dynatrace.version>
+		<dynatrace-dubbo.version>7.0.0.2470</dynatrace-dubbo.version>
+		<dynatrace-oneagent-dubbo.version>1.0.3</dynatrace-oneagent-dubbo.version>
     </properties>
 
 	<modules>
@@ -73,9 +74,15 @@
 			<dependency>
 				<groupId>com.dynatrace</groupId>
 				<artifactId>com.dynatrace.adk</artifactId>
-				<version>${dynatrace.version}</version>
+				<version>${dynatrace-dubbo.version}</version>
 				<scope>runtime</scope>
 			</dependency>
+			<dependency> 
+				<groupId>com.dynatrace</groupId>
+				<artifactId>dynatrace-oneagent-dubbo</artifactId>
+				<version>${dynatrace-oneagent-dubbo.version}</version>
+				<scope>runtime</scope> 
+			</dependency> 
 		</dependencies>
 	</dependencyManagement>
 	

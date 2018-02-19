@@ -15,11 +15,12 @@
 	</parent>
 
 	<dependencies>
+    	<!-- Petclinic -->
 		<dependency>
 			<groupId>org.springframework.samples.petclinic</groupId>
 			<artifactId>spring-petclinic-service-api</artifactId>
-			<version>1.5.1</version>
-		</dependency>
+			<version>1.5.9.RELEASE</version>
+		</dependency>	
         <!-- Spring Boot -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -51,11 +52,7 @@
 			
 			<dependency>
 				<groupId>com.dynatrace</groupId>
-				<artifactId>dynatrace-dubbo</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>com.dynatrace</groupId>
-				<artifactId>com.dynatrace.adk</artifactId>
+				<artifactId>dynatrace-oneagent-dubbo</artifactId>
 			</dependency>
 		
         <!-- Third parties-->

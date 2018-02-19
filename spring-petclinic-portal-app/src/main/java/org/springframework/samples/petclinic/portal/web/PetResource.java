@@ -86,7 +86,7 @@ class PetResource {
     private void save(final PetDetails pet, final PetRequest petRequest) {
     	pet.setName(petRequest.getName());
     	pet.setBirthDate(petRequest.getBirthDate());
-    	petService.findPetTypeById(petRequest.getTypeId()).ifPresent(pet::setType);
+    	petService.findPetTypeById(petRequest.getTypeId()).getId();
     	log.info("Saving pet {}", pet);
     	petService.save(pet);
     }

@@ -1,7 +1,6 @@
 package org.springframework.samples.petclinic.customers.service.impl;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.context.annotation.Lazy;
 import org.springframework.samples.petclinic.customers.dao.PetRepository;
@@ -29,8 +28,8 @@ public class PetServiceImpl implements PetService{
 	}
 
 	@Override
-	public Optional<PetTypeDetails> findPetTypeById(int typeId) {
-		return Convertor.convert(petRepository.findPetTypeById(typeId));
+	public PetTypeDetails findPetTypeById(int typeId) {
+		return Convertor.convert(petRepository.findPetTypeById(typeId)).get();
 	}
 
 	@Override
